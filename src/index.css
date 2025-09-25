@@ -1,2 +1,25 @@
+/* Import "Inter" Font from Google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Import TailwindCSS */
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui"; /* Import DaisyUI */
+
+/* Custom TailwindCSS */
+@theme {
+  --font-inter: Inter, sans-serif;
+  --color-custom-purple-dark: rgb(99, 46, 227);
+  --color-custom-purple-light: rgb(159, 98, 242);
+  --background-image-hero-section: linear-gradient(
+    90deg,
+    rgba(1, 50, 35, 1),
+    rgba(0, 103, 71, 1) 50%,
+    rgba(1, 50, 35, 1) 100%
+  );
+}
+
+@layer components {
+  .bg-gradient-purple {
+    @apply bg-gradient-to-br active:bg-gradient-to-tl active:from-custom-purple-light active:bg-custom-purple-dark from-custom-purple-dark to-custom-purple-light text-white;
+  }
+}
