@@ -10,16 +10,15 @@
   --font-inter: Inter, sans-serif;
   --color-custom-purple-dark: rgb(99, 46, 227);
   --color-custom-purple-light: rgb(159, 98, 242);
-  --background-image-hero-section: linear-gradient(
-    90deg,
-    rgba(1, 50, 35, 1),
-    rgba(0, 103, 71, 1) 50%,
-    rgba(1, 50, 35, 1) 100%
-  );
+  --color-custom-green-light: rgba(84,207,104);
+  --color-custom-green-dark: rgb(0, 130, 122);
+  
 }
 
 @layer components {
   .bg-gradient-purple {
     @apply bg-gradient-to-br active:bg-gradient-to-tl active:from-custom-purple-light active:bg-custom-purple-dark from-custom-purple-dark to-custom-purple-light text-white;
   }
+
+  
 }
