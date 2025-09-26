@@ -3,7 +3,7 @@
 const StatusCard = ({ticket, handleCompleteStatus }) => {
   const handleClick = () => {
     handleCompleteStatus(ticket.id);
-    console.log(`Ticket ${ticket.id} status changed to Resolved`);
+    alert(`Ticket ${ticket.id} status changed to Resolved`);
   };
   return (
     <div

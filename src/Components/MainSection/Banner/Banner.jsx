@@ -8,7 +8,7 @@ const Banner = ({ tickets }) => {
     (ticket) => ticket.status === "Resolved"
   );
   return (
-    <section className="px-8 md:px-20 py-8 md:py-20 flex flex-col md:flex-row justify-between gap-6">
+    <section className="px-8 md:px-20 py-8 md:py-20 flex flex-col lg:flex-row justify-between gap-6">
       <BannerCard
         name="In-Progress"
         value={inProgressTickets.length}

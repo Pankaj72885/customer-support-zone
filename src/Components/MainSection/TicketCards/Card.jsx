@@ -16,7 +16,7 @@ const Card = ({ ticket, handleStateUpdate }) => {
 
   const handleClick = () => {
     handleStateUpdate(ticket.id);
-    console.log(`Ticket ${ticket.id} status changed to In-Progress`);
+    alert(`Ticket ${ticket.id} status changed to In-Progress`);
   };
 
   return (
@@ -24,10 +24,12 @@ const Card = ({ ticket, handleStateUpdate }) => {
       onClick={handleClick}
       className="p-4 space-y-3 bg-white shadow-custom rounded"
     >
-      <div className="flex justify-between items-center">
-        <h2 className="text-lg font-medium text-[#001931]">{ticket.title}</h2>
+      <div className="flex flex-col gap-y-2 md:flex-row md:justify-between md:items-center">
+        <h2 className="text-lg font-medium text-center md:text-left text-[#001931]">
+          {ticket.title}
+        </h2>
         <button
-          className={`rounded-full px-3 py-1 before:content-[''] before:inline-block before:w-3 before:h-3 before:rounded-full before:mr-2 ${getStatusColor(
+          className={`rounded-full flex-none px-3 py-1 before:content-[''] before:inline-block before:w-3 before:h-3 before:rounded-full before:mr-2 ${getStatusColor(
             ticket.status
           )}`}
         >
@@ -37,8 +39,8 @@ const Card = ({ ticket, handleStateUpdate }) => {
       <div>
         <p className="text-custom-text text-justify">{ticket.description}</p>
       </div>
-      <div className="flex justify-between items-center text-sm">
-        <div className="flex gap-4 items-center">
+      <div className="flex flex-col lg:flex-row justify-between items-center text-sm gap-y-2">
+        <div className="flex gap-4 items-center justify-between w-full lg:w-auto">
           <p className="text-custom-text">
             #<span>{ticket.id}</span>
           </p>
@@ -54,7 +56,7 @@ const Card = ({ ticket, handleStateUpdate }) => {
             {ticket.priority}
           </p>
         </div>
-        <div className="flex gap-4 items-center text-custom-text">
+        <div className="flex gap-4 items-center text-custom-text justify-between w-full lg:w-auto">
           <p>{ticket.customer}</p>
           <div className="flex gap-1 items-center">
             <img src={dateSvg} alt="Date logo" />

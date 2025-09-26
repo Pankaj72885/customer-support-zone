@@ -28,7 +28,7 @@ const MainSection = ({ ticketDataPromise }) => {
       <div className="bg-[#F5F5F5]">
         <Container>
           <Banner tickets={tickets} />
-          <section className="px-8 md:px-20 pb-8 md:pb-20 grid md:grid-cols-7 gap-8">
+          <section className="px-8 md:px-20 pb-8 md:pb-20 grid grid-cols-1 lg:grid-cols-7 gap-8 ">
             <CustomerTickets
               tickets={tickets}
               handleStateUpdate={handleStateUpdate}

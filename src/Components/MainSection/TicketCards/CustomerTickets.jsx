@@ -3,9 +3,9 @@ const CustomerTickets = ({ tickets, handleStateUpdate }) => {
 
   const showTickets = tickets.filter((ticket) => ticket.status !== "Resolved");
   return (
-    <div className="md:col-span-5">
+    <div className="lg:col-span-5">
       <h1 className="header-text">Customer Tickets</h1>
-      <div className="grid grid-cols-2 gap-4 md:gap-x-6 mt-4">
+      <div className="grid md:grid-cols-2 gap-4 md:gap-x-6 mt-4">
         {showTickets.map((ticket) => (
           <Card
             key={ticket.id}
