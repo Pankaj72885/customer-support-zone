@@ -1,5 +1,5 @@
-import leftVector from "../../assets/vector1.png";
-import rightVector from "../../assets/vector2.png";
+import leftVector from "../../../assets/vector1.png";
+import rightVector from "../../../assets/vector2.png";
 const BannerCard = ({name, value, bgColor}) => {
   return (
     <div

@@ -1,24 +1,30 @@
+/* 
+./src/index.css
+Main CSS file for the project.
+This file is used to import TailwindCSS, DaisyUI, and custom styles.
+*/
+
 /* Import "Inter" Font from Google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 /* Import TailwindCSS */
 @import "tailwindcss";
-@plugin "daisyui"; /* Import DaisyUI */
+/* Import DaisyUI */
+@plugin "daisyui";
 
 /* Custom TailwindCSS */
 @theme {
   --font-inter: Inter, sans-serif;
+  --color-custom-text: rgba(98, 115, 130, 1);
   --color-custom-purple-dark: rgb(99, 46, 227);
   --color-custom-purple-light: rgb(159, 98, 242);
-  --color-custom-green-light: rgba(84,207,104);
+  --color-custom-green-light: rgba(84, 207, 104);
   --color-custom-green-dark: rgb(0, 130, 122);
-  
+  --shadow-custom: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 }
 
 @layer components {
-  .bg-gradient-purple {
-    @apply bg-gradient-to-br active:bg-gradient-to-tl active:from-custom-purple-light active:bg-custom-purple-dark from-custom-purple-dark to-custom-purple-light text-white;
+  .header-text {
+    @apply text-2xl font-semibold text-[#34485A];
   }
-
-  
 }
