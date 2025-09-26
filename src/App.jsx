@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
 import MainSection from "./Components/MainSection/MainSection";
 import Navigation from "./Components/Navigation";
@@ -15,11 +16,11 @@ function App() {
   return (
     <>
       <Navigation />
-
       <Suspense fallback={<div>Loading...</div>}>
         <MainSection ticketDataPromise={ticketDataPromise} />
       </Suspense>
       <Footer />
+      <ToastContainer />
     </>
   );
 }

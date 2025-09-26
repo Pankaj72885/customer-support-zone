@@ -1,15 +1,11 @@
-
-
-const StatusCard = ({ticket, handleCompleteStatus }) => {
+import { toast } from "react-toastify";
+const StatusCard = ({ ticket, handleCompleteStatus }) => {
   const handleClick = () => {
     handleCompleteStatus(ticket.id);
-    alert(`Ticket ${ticket.id} status changed to Resolved`);
+    toast(`${ticket.id} no ticket status changed to Resolved`);
   };
   return (
-    <div
-      
-      className="p-4 space-y-3 bg-white shadow-custom rounded"
-    >
+    <div className="p-4 space-y-3 bg-white shadow-custom rounded">
       <h2 className="text-lg font-semibold text-[#34485A] mb-2">
         {ticket.title}
       </h2>

@@ -42,7 +42,7 @@
       "description": "Customer reports that the mobile app crashes immediately upon opening on Android 13. Unable to access any features.",
       "customer": "David Wilson",
       "priority": "HIGH PRIORITY",
-      "status": "In-Progress",
+      "status": "Open",
       "createdAt": "2024-01-19T08:15:00Z"
     },
     {
@@ -51,7 +51,7 @@
       "description": "Customer requested a refund two weeks ago but has not received the amount yet. Order #RF2024-001 still shows as pending.",
       "customer": "Sophia Taylor",
       "priority": "MEDIUM PRIORITY",
-      "status": "In-Progress",
+      "status": "Open",
       "createdAt": "2024-01-20T13:28:00Z"
     },
     {
@@ -105,7 +105,7 @@
       "description": "Customer cannot export their data from the dashboard. The export button generates an empty CSV file instead of their actual data.",
       "customer": "Emma Thompson",
       "priority": "MEDIUM PRIORITY",
-      "status": "In-Progress",
+      "status": "Open",
       "createdAt": "2024-01-26T14:18:00Z"
     },
     {
