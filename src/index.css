@@ -10,7 +10,9 @@ This file is used to import TailwindCSS, DaisyUI, and custom styles.
 /* Import TailwindCSS */
 @import "tailwindcss";
 /* Import DaisyUI */
-@plugin "daisyui";
+@plugin "daisyui"{
+  themes: light --default;
+}
 
 /* Custom TailwindCSS */
 @theme {

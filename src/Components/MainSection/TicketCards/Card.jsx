@@ -1,5 +1,5 @@
-import dateSvg from "../../../assets/date.svg";
 import { toast } from "react-toastify";
+import dateSvg from "../../../assets/date.svg";
 
 const Card = ({ ticket, handleStateUpdate }) => {
   const getStatusColor = (status) => {
@@ -16,9 +16,12 @@ const Card = ({ ticket, handleStateUpdate }) => {
   };
 
   const handleClick = () => {
+    if (ticket.status === "In-Progress") {
+      toast.error("Ticket is already In-Progress");
+      return;
+    }
     handleStateUpdate(ticket.id);
     toast(`${ticket.id} no ticket status changed to In-Progress`);
-    
   };
 
   return (
