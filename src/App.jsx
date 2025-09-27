@@ -16,7 +16,14 @@ function App() {
   return (
     <>
       <Navigation />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center w-full h-50 text-3xl text-center text-warning bg-[#F5F5F5]">
+            <span className="loading loading-spinner text-warning w-10 h-10"></span>{" "}
+            Loading...
+          </div>
+        }
+      >
         <MainSection ticketDataPromise={ticketDataPromise} />
       </Suspense>
       <Footer />
